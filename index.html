@@ -1,1 +1,45 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>空間の点 ― 数学C 空間ベクトル</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="hideR">
+<header>
+  <h1>空間の点<small>数学C 空間ベクトル</small></h1>
+  <nav id="tabs"></nav>
+  <div class="tg"><button id="tL" class="btn sm">操作パネル</button><button id="tR" class="btn sm">説明</button></div>
+</header>
+<main>
+  <aside id="left"></aside>
+  <section id="stage" data-layout="3d">
+    <div id="wrap3d"></div>
+    <div id="wrap2d"><canvas id="c2d"></canvas></div>
+  </section>
+  <aside id="right">
+    <div id="explain"></div>
+    <div class="guide"><b>操作ガイド</b><p id="guide"></p></div>
+  </aside>
+</main>
+<footer>
+  <button id="bView" class="btn sm">視点リセット</button>
+  <label><input type="checkbox" id="chAxes" checked> 座標軸</label>
+  <label>平面の透明度 <input type="range" id="rOp" min="0.05" max="0.8" step="0.05" value="0.25"></label>
+  <span class="sep"></span>
+  <button id="bPlay" class="btn sm">⏸ 一時停止</button>
+  <button id="bReplay" class="btn sm">↻ 再実行</button>
+  <select id="sSpeed"><option value="0">速度：通常</option><option value="1">速度：低速</option></select>
+  <button id="bLayout" class="btn sm">表示切替</button>
+  <span class="sep"></span>
+  <button id="bReset" class="btn sm">最初の状態に戻す</button>
+  <button id="bHelp" class="btn sm">このモードの使い方</button>
+  <span class="hint">ドラッグ：回転　ホイール：拡大・縮小</span>
+</footer>
+<dialog id="dlg"><h3 id="dlgT"></h3><ol id="dlgL"></ol><button class="btn" id="dlgC">閉じる</button></dialog>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
